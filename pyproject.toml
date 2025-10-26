@@ -1,0 +1,10 @@
+[project]
+name = "programming-in-python"
+version = "0.1.0"
+description = "University course repository for Programming in Python"
+readme = "README.md"
+authors = [
+    { name = "isnastish", email = "paukden12@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = []
