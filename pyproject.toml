@@ -7,4 +7,6 @@ authors = [
     { name = "isnastish", email = "paukden12@gmail.com" }
 ]
 requires-python = ">=3.12"
-dependencies = []
+dependencies = [
+    "ruff>=0.14.2",
+]
