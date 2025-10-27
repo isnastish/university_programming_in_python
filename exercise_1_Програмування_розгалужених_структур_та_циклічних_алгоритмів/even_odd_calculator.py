@@ -6,5 +6,6 @@ def calculate_even_odd():
     print(f"Sum of even numbers: {even_sum}")
     print(f"Product of odd numbers: {odd_product}")
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     calculate_even_odd()
