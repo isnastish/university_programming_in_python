@@ -6,7 +6,6 @@ def add_student(students: dict) -> None:
     """
     Add a new student to the dictionary.
     Author: Yevtushenko Oleksii
-
     Args:
         students: dictionary with student data
     """
@@ -25,7 +24,6 @@ def add_student(students: dict) -> None:
         if not group:
             print("Error: Group number cannot be empty.")
             return
-
         first_name = input("Enter first name: ").strip()
         if not first_name:
             print("Error: First name cannot be empty.")
@@ -37,7 +35,6 @@ def add_student(students: dict) -> None:
         if course < 1 or course > 6:
             print("Error: Course must be between 1 and 6.")
             return
-
         subjects = {}
         print("Enter subjects and grades (type 'end' to finish):")
         while True:
@@ -85,7 +82,6 @@ def display_all_students(students: dict) -> None:
     """
     Display all values from the dictionary.
     Author: Yevtushenko Oleksii
-
     Args:
         students: dictionary with student data
     """
@@ -136,14 +132,12 @@ def find_students_by_group(students: dict) -> None:
     """
     Search for students by group number.
     Author: Yevtushenko Oleksii
-
     Args:
         students: dictionary with student data
     """
     if not students:
         print("Dictionary is empty.")
         return
-
     group = input("Enter group number to search: ").strip()
     if not group:
         print("Error: Group number cannot be empty.")
@@ -198,19 +192,16 @@ def remove_student(students: dict) -> None:
     """
     Remove a student record from the dictionary.
     Author: Yevtushenko Oleksii
-
     Args:
         students: dictionary with student data
     """
     if not students:
         print("No students.")
         return
-
     surname = input("Enter student surname to remove: ").strip()
     if not surname or surname not in students:
         print("Error: Student not found.")
         return
-
     students.pop(surname)
     print(f"Removed: {surname}")
 
@@ -219,14 +210,12 @@ def calculate_group_average(students: dict) -> None:
     """
     Calculate average grade for a group.
     Author: Yevtushenko Oleksii
-
     Args:
         students: dictionary with student data
     """
     if not students:
         print("No students.")
         return
-
     group = input("Enter group number: ").strip()
     if not group:
         print("Error: Invalid input.")
@@ -250,7 +239,6 @@ def main_menu(students: dict) -> None:
     """
     Main menu for working with dictionary.
     Author: Yevtushenko Oleksii
-
     Args:
         students: dictionary with student data
     """
