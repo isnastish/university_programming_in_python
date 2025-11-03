@@ -90,6 +90,6 @@ def test_find_shortest_word_length():
 
 
 if __name__ == "__main__":
-    # process_string_slicing()
+    process_string_slicing()
     # test_find_largest_digit()
-    test_find_shortest_word_length()
+    # test_find_shortest_word_length()
