@@ -294,5 +294,4 @@ if __name__ == "__main__":
     except Exception as e:
         print(f"Error loading data: {e}")
         students = {}
-
     main_menu(students)
