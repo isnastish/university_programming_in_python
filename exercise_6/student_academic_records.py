@@ -1,16 +1,5 @@
-"""
-Program for working with dictionary of student academic performance in a group.
-Author: Yevtushenko Oleksii
-
-Dictionary structure:
-- key: student surname (string)
-- value: dictionary with data:
-  - 'group': group number (string)
-  - 'full_name': full name (dictionary: 'surname', 'first_name', 'patronymic')
-  - 'course': course number (integer)
-  - 'subjects': dictionary of subjects and grades {subject: grade}
-  - 'average': average grade (float, calculated automatically)
-"""
+import json
+import os
 
 
 def add_student(students: dict) -> None:
@@ -266,110 +255,41 @@ def main_menu(students: dict) -> None:
         
         choice = input("Enter your choice (1-8): ").strip()
         
-        if choice == '1':
-            add_student(students)
-        elif choice == '2':
-            display_all_students(students)
-        elif choice == '3':
-            display_sorted_by_keys(students)
-        elif choice == '4':
-            sort_students_by_average(students)
-        elif choice == '5':
-            find_students_by_group(students)
-        elif choice == '6':
-            calculate_group_average(students)
-        elif choice == '7':
-            remove_student(students)
-        elif choice == '8':
-            break
-        else:
-            print("Invalid choice.")
+        match choice:
+            case '1':
+                add_student(students)
+            case '2':
+                display_all_students(students)
+            case '3':
+                display_sorted_by_keys(students)
+            case '4':
+                sort_students_by_average(students)
+            case '5':
+                find_students_by_group(students)
+            case '6':
+                calculate_group_average(students)
+            case '7':
+                remove_student(students)
+            case '8':
+                break
+            case _:
+                print("Invalid choice.")
 
 
 if __name__ == "__main__":
-    # Initialize dictionary with sample data
-    # Author: Yevtushenko Oleksii
-    students = {
-        'Petrenko': {
-            'group': 'IP-21',
-            'full_name': {
-                'surname': 'Petrenko',
-                'first_name': 'Oleksandr',
-                'patronymic': 'Ivanovych'
-            },
-            'course': 2,
-            'subjects': {
-                'Mathematics': 85,
-                'Programming': 92,
-                'Physics': 78,
-                'English': 88
-            },
-            'average': 85.75
-        },
-        'Kovalenko': {
-            'group': 'IP-21',
-            'full_name': {
-                'surname': 'Kovalenko',
-                'first_name': 'Maria',
-                'patronymic': 'Petrivna'
-            },
-            'course': 2,
-            'subjects': {
-                'Mathematics': 95,
-                'Programming': 98,
-                'Physics': 90,
-                'English': 92
-            },
-            'average': 93.75
-        },
-        'Sydorenko': {
-            'group': 'IP-22',
-            'full_name': {
-                'surname': 'Sydorenko',
-                'first_name': 'Dmytro',
-                'patronymic': 'Oleksandrovych'
-            },
-            'course': 1,
-            'subjects': {
-                'Mathematics': 75,
-                'Programming': 80,
-                'Physics': 70,
-                'English': 78
-            },
-            'average': 75.75
-        },
-        'Ivanenko': {
-            'group': 'IP-21',
-            'full_name': {
-                'surname': 'Ivanenko',
-                'first_name': 'Anna',
-                'patronymic': 'Serhiivna'
-            },
-            'course': 2,
-            'subjects': {
-                'Mathematics': 88,
-                'Programming': 85,
-                'Physics': 82,
-                'English': 90
-            },
-            'average': 86.25
-        },
-        'Melnyk': {
-            'group': 'IP-22',
-            'full_name': {
-                'surname': 'Melnyk',
-                'first_name': 'Volodymyr',
-                'patronymic': 'Mykolayovych'
-            },
-            'course': 1,
-            'subjects': {
-                'Mathematics': 90,
-                'Programming': 88,
-                'Physics': 85,
-                'English': 87
-            },
-            'average': 87.5
-        }
-    }
+    json_file = os.path.join(os.path.dirname(__file__), 'students_data.json')
+    
+    try:
+        with open(json_file, 'r', encoding='utf-8') as f:
+            students = json.load(f)
+    except FileNotFoundError:
+        print(f"Error: File '{json_file}' not found.")
+        students = {}
+    except json.JSONDecodeError:
+        print(f"Error: Invalid JSON in file '{json_file}'.")
+        students = {}
+    except Exception as e:
+        print(f"Error loading data: {e}")
+        students = {}
     
     main_menu(students)
