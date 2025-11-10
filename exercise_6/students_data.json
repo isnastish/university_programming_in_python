@@ -1,0 +1,83 @@
+{
+    "Petrenko": {
+        "group": "IP-21",
+        "full_name": {
+            "surname": "Petrenko",
+            "first_name": "Oleksandr",
+            "patronymic": "Ivanovych"
+        },
+        "course": 2,
+        "subjects": {
+            "Mathematics": 85,
+            "Programming": 92,
+            "Physics": 78,
+            "English": 88
+        },
+        "average": 85.75
+    },
+    "Kovalenko": {
+        "group": "IP-21",
+        "full_name": {
+            "surname": "Kovalenko",
+            "first_name": "Maria",
+            "patronymic": "Petrivna"
+        },
+        "course": 2,
+        "subjects": {
+            "Mathematics": 95,
+            "Programming": 98,
+            "Physics": 90,
+            "English": 92
+        },
+        "average": 93.75
+    },
+    "Sydorenko": {
+        "group": "IP-22",
+        "full_name": {
+            "surname": "Sydorenko",
+            "first_name": "Dmytro",
+            "patronymic": "Oleksandrovych"
+        },
+        "course": 1,
+        "subjects": {
+            "Mathematics": 75,
+            "Programming": 80,
+            "Physics": 70,
+            "English": 78
+        },
+        "average": 75.75
+    },
+    "Ivanenko": {
+        "group": "IP-21",
+        "full_name": {
+            "surname": "Ivanenko",
+            "first_name": "Anna",
+            "patronymic": "Serhiivna"
+        },
+        "course": 2,
+        "subjects": {
+            "Mathematics": 88,
+            "Programming": 85,
+            "Physics": 82,
+            "English": 90
+        },
+        "average": 86.25
+    },
+    "Melnyk": {
+        "group": "IP-22",
+        "full_name": {
+            "surname": "Melnyk",
+            "first_name": "Volodymyr",
+            "patronymic": "Mykolayovych"
+        },
+        "course": 1,
+        "subjects": {
+            "Mathematics": 90,
+            "Programming": 88,
+            "Physics": 85,
+            "English": 87
+        },
+        "average": 87.5
+    }
+}
+
