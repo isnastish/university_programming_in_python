@@ -100,7 +100,7 @@ def display_all_students(students: dict) -> None:
         )
 
 
-def sort_students_by_average(students: dict) -> None:
+def sort_students_by_average_grade(students: dict) -> None:
     """
     Sort dictionary data by average grade (descending).
     Author: Yevtushenko Oleksii
@@ -206,7 +206,7 @@ def remove_student(students: dict) -> None:
     print(f"Removed: {surname}")
 
 
-def calculate_group_average(students: dict) -> None:
+def calculate_group_average_grade(students: dict) -> None:
     """
     Calculate average grade for a group.
     Author: Yevtushenko Oleksii
@@ -266,11 +266,11 @@ def main_menu(students: dict) -> None:
             case "3":
                 display_sorted_by_keys(students)
             case "4":
-                sort_students_by_average(students)
+                sort_students_by_average_grade(students)
             case "5":
                 find_students_by_group(students)
             case "6":
-                calculate_group_average(students)
+                calculate_group_average_grade(students)
             case "7":
                 remove_student(students)
             case "8":
