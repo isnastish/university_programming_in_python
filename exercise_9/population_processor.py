@@ -49,22 +49,24 @@ def find_ukraine_population_data(
             row.get("Country Name", "").strip() == country
             and row.get("Indicator Name", "").strip() == indicator
         ):
-            for year in range(start_year, end_year + 1):
-                value = row.get(str(year), "").strip()
-                if value:
-                    try:
-                        population = float(value)
+            year_str = row.get("Year", "").strip()
+            population_str = row.get("Population", "").strip()
+
+            if year_str and population_str:
+                try:
+                    year = int(year_str)
+                    if start_year <= year <= end_year:
+                        population = float(population_str)
                         result.append(
                             {
-                                "Year": str(year),
+                                "Year": year_str,
                                 "Population": population,
                                 "Country": country,
                                 "Indicator": indicator,
                             }
                         )
-                    except ValueError:
-                        continue
-            break
+                except (ValueError, TypeError):
+                    continue
 
     return result
 
@@ -119,8 +121,12 @@ def main():
         print("\n" + "=" * 60)
         print("RESULTS:")
         print("=" * 60)
-        print(f"Minimum Population: {min_max['min']['Population']:,.0f} in {min_max['min']['Year']}")
-        print(f"Maximum Population: {min_max['max']['Population']:,.0f} in {min_max['max']['Year']}")
+        print(
+            f"Minimum Population: {min_max['min']['Population']:,.0f} in {min_max['min']['Year']}"
+        )
+        print(
+            f"Maximum Population: {min_max['max']['Population']:,.0f} in {min_max['max']['Year']}"
+        )
         print("=" * 60)
 
         write_results_to_csv(min_max, output_filename)

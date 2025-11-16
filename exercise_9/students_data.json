@@ -1,0 +1,52 @@
+[
+  {
+    "name": "Student1",
+    "gender": "male",
+    "height": 185.5
+  },
+  {
+    "name": "Student2",
+    "gender": "female",
+    "height": 175.0
+  },
+  {
+    "name": "Student3",
+    "gender": "male",
+    "height": 172.3
+  },
+  {
+    "name": "Student4",
+    "gender": "female",
+    "height": 168.7
+  },
+  {
+    "name": "Student5",
+    "gender": "male",
+    "height": 165.2
+  },
+  {
+    "name": "Student6",
+    "gender": "female",
+    "height": 162.8
+  },
+  {
+    "name": "Student7",
+    "gender": "male",
+    "height": 160.1
+  },
+  {
+    "name": "Student8",
+    "gender": "female",
+    "height": 158.5
+  },
+  {
+    "name": "Student9",
+    "gender": "male",
+    "height": 155.9
+  },
+  {
+    "name": "Student10",
+    "gender": "female",
+    "height": 152.4
+  }
+]

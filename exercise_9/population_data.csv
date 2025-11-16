@@ -1,3 +1,30 @@
-Country Name,Country Code,Indicator Name,1991,1992,1993,1994,1995,1996,1997,1998,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019
-Ukraine,UKR,"Population, total",51892000,52000000,52100000,52150000,52180000,52150000,52080000,51980000,51850000,51690000,51510000,51330000,51150000,50980000,50820000,50660000,50500000,50350000,50220000,50120000,50080000,50040000,50010000,49980000,49920000,49850000,49780000,49700000,49600000
-
+Country Name,Country Code,Indicator Name,Year,Population
+Ukraine,UKR,"Population, total",1991,51892000
+Ukraine,UKR,"Population, total",1992,52000000
+Ukraine,UKR,"Population, total",1993,52100000
+Ukraine,UKR,"Population, total",1994,52150000
+Ukraine,UKR,"Population, total",1995,52180000
+Ukraine,UKR,"Population, total",1996,52150000
+Ukraine,UKR,"Population, total",1997,52080000
+Ukraine,UKR,"Population, total",1998,51980000
+Ukraine,UKR,"Population, total",1999,51850000
+Ukraine,UKR,"Population, total",2000,51690000
+Ukraine,UKR,"Population, total",2001,51510000
+Ukraine,UKR,"Population, total",2002,51330000
+Ukraine,UKR,"Population, total",2003,51150000
+Ukraine,UKR,"Population, total",2004,50980000
+Ukraine,UKR,"Population, total",2005,50820000
+Ukraine,UKR,"Population, total",2006,50660000
+Ukraine,UKR,"Population, total",2007,50500000
+Ukraine,UKR,"Population, total",2008,50350000
+Ukraine,UKR,"Population, total",2009,50220000
+Ukraine,UKR,"Population, total",2010,50120000
+Ukraine,UKR,"Population, total",2011,50080000
+Ukraine,UKR,"Population, total",2012,50040000
+Ukraine,UKR,"Population, total",2013,50010000
+Ukraine,UKR,"Population, total",2014,49980000
+Ukraine,UKR,"Population, total",2015,49920000
+Ukraine,UKR,"Population, total",2016,49850000
+Ukraine,UKR,"Population, total",2017,49780000
+Ukraine,UKR,"Population, total",2018,49700000
+Ukraine,UKR,"Population, total",2019,49600000
