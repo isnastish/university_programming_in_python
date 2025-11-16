@@ -96,7 +96,11 @@ def display_all_students(students: dict) -> None:
         )
         subjects_str = ", ".join([f"{s}: {g}" for s, g in data["subjects"].items()])
         print(
-            f"{surname} {name_str} - Group: {data['group']}, Course: {data['course']}, Avg: {data['average']} | {subjects_str}"
+            f"{surname} {name_str} - "
+            f"Group: {data['group']}, "
+            f"Course: {data['course']}, "
+            f"Avg: {data['average']} | "
+            f"{subjects_str}"
         )
 
 
