@@ -8,5 +8,6 @@ authors = [
 ]
 requires-python = ">=3.12"
 dependencies = [
+    "matplotlib>=3.10.7",
     "ruff>=0.14.2",
 ]
