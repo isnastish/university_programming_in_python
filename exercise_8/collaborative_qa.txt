@@ -1,0 +1,8 @@
+============================================================
+STUDENT COLLABORATION: PYTHON Q&A
+============================================================
+
+--- STUDENT 1: Yevtushenko Oleksii ---
+
+QUESTION: What is list comprehension in Python and provide an example of its usage?
+
