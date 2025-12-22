@@ -6,3 +6,12 @@ STUDENT COLLABORATION: PYTHON Q&A
 
 QUESTION: What is list comprehension in Python and provide an example of its usage?
 
+------------------------------------------------------------
+--- STUDENT: Surname Name ---
+
+ANSWER:
+  List comprehension is a compact way to create lists.
+  Example: squares = [x**2 for x in range(10)]
+
+QUESTION: What is the difference between list and tuple?
+

@@ -71,11 +71,11 @@ if __name__ == "__main__":
         )
 
     # STUDENT 2: Yevtushenko Oleksii - added answer and question
-    # add_answer_and_question(
-    #     "Surname Name",
-    #     "List comprehension is a compact way to create lists.\nExample: squares = [x**2 for x in range(10)]",
-    #     "What is the difference between list and tuple?"
-    # )
+    add_answer_and_question(
+        "Surname Name",
+        "List comprehension is a compact way to create lists.\nExample: squares = [x**2 for x in range(10)]",
+        "What is the difference between list and tuple?"
+    )
 
     # STUDENT 3: Yevtushenko Oleksii - added answer and question
     # add_answer_and_question(
