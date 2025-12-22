@@ -38,6 +38,13 @@ def add_answer_and_question(
             print(f"Error: File '{COLLABORATIVE_FILE}' not found!")
             return
 
+        # Check if this student already answered (prevent duplicates)
+        with open(COLLABORATIVE_FILE, "r", encoding="utf-8") as f:
+            content = f.read()
+            if f"--- STUDENT: {surname} ---" in content:
+                print(f"Student {surname} already answered, skipping.")
+                return
+
         with open(COLLABORATIVE_FILE, "a", encoding="utf-8") as f:
             f.write("-" * 60 + "\n")
             f.write(f"--- STUDENT: {surname} ---\n\n")
@@ -63,25 +70,31 @@ def display_file() -> None:
 
 
 if __name__ == "__main__":
-    # STUDENT 1: Yevtushenko Oleksii
-    if not os.path.exists(COLLABORATIVE_FILE):
-        create_initial_file(
-            "Yevtushenko Oleksii",
-            "What is list comprehension in Python and provide an example?",
-        )
-
-    # STUDENT 2: Yevtushenko Oleksii - added answer and question
-    add_answer_and_question(
-        "Surname Name",
-        "List comprehension is a compact way to create lists.\nExample: squares = [x**2 for x in range(10)]",
-        "What is the difference between list and tuple?"
+    # STUDENT 1: Yevtushenko Oleksii - creates initial file
+    create_initial_file(
+        "Yevtushenko Oleksii",
+        "What is list comprehension in Python and provide an example?",
     )
 
-    # STUDENT 3: Yevtushenko Oleksii - added answer and question
-    # add_answer_and_question(
-    #     "Surname Name",
-    #     "Your answer here...",
-    #     "Your question here..."
-    # )
+    # STUDENT 2: Yevtushenko Oleksii - answers and asks new question
+    add_answer_and_question(
+        "Yevtushenko Oleksii (Student 2)",
+        "List comprehension is a compact way to create lists.\nExample: squares = [x**2 for x in range(10)]",
+        "What is the difference between list and tuple?",
+    )
+
+    # STUDENT 3: Yevtushenko Oleksii - answers and asks new question
+    add_answer_and_question(
+        "Yevtushenko Oleksii (Student 3)",
+        """The main differences between list and tuple in Python:
+1. Mutability: Lists are mutable (can be changed), tuples are immutable (cannot be changed)
+2. Syntax: Lists use [], tuples use ()
+3. Performance: Tuples are faster and use less memory
+4. Use cases: Lists for collections that change, tuples for fixed data
+
+Example:
+my_list = [1, 2, 3]    # can do my_list[0] = 10
+my_tuple = (1, 2, 3)   # my_tuple[0] = 10 raises TypeError""",
+    )
 
     display_file()

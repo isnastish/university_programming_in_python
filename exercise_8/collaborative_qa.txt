@@ -4,14 +4,28 @@ STUDENT COLLABORATION: PYTHON Q&A
 
 --- STUDENT 1: Yevtushenko Oleksii ---
 
-QUESTION: What is list comprehension in Python and provide an example of its usage?
+QUESTION: What is list comprehension in Python and provide an example?
 
 ------------------------------------------------------------
---- STUDENT: Surname Name ---
+--- STUDENT: Yevtushenko Oleksii (Student 2) ---
 
 ANSWER:
   List comprehension is a compact way to create lists.
   Example: squares = [x**2 for x in range(10)]
 
 QUESTION: What is the difference between list and tuple?
+
+------------------------------------------------------------
+--- STUDENT: Yevtushenko Oleksii (Student 3) ---
+
+ANSWER:
+  The main differences between list and tuple in Python:
+  1. Mutability: Lists are mutable (can be changed), tuples are immutable (cannot be changed)
+  2. Syntax: Lists use [], tuples use ()
+  3. Performance: Tuples are faster and use less memory
+  4. Use cases: Lists for collections that change, tuples for fixed data
+  
+  Example:
+  my_list = [1, 2, 3]    # can do my_list[0] = 10
+  my_tuple = (1, 2, 3)   # my_tuple[0] = 10 raises TypeError
 
